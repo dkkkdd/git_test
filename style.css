@@ -106,9 +106,9 @@ body {
 }
 .book {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr auto; 
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr 0.5fr auto; 
     align-items: center;
-    gap: 0.5em;
+    gap: 0.2em;
     width: 100%;
     padding: 1em;
     border-radius: 0.7em;
@@ -118,8 +118,10 @@ body {
     transition: all 0.3s ease;
     word-break: break-word; 
 }
+
+
 .book:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 0 0.5em #000;
 }
 
@@ -153,11 +155,57 @@ body {
     background-color: rgb(99, 82, 196);
 }
 
-.masagge{
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+/* .edit{
+} */
+.message{
     padding: 2em;
     background-color: var(--readed-book-color);
     border-radius: 100px;
     box-shadow: 0 0 0.5em #000;
     text-align: center;
+    display: none;
+}
+
+.book.editing {
+    outline: 2px solid #ffae00;
+    background: rgba(255, 174, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.add.saving {
+    background-color: #ffae00;
+    color: #000;
+}
+
+.modal-window{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    position: relative;
+}
+.close-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.none{
     display: none;
 }

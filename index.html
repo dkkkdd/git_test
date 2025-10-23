@@ -13,8 +13,19 @@
 </header>
 
 <main class="main">
+
     <div class="container">
-        <form class="form">
+        <button class="open-modal btn">Add book</button>
+
+        <div class="library"></div>
+
+    </div>
+    <div class="message">Your Library is empty. Add your first book!</div>
+</main>
+
+  <div class="modal-window none">
+      <form class="form">
+        <button class="close-modal btn">X</button>
             <label for="title">
                 <span>Title:</span>
                 <input type="text" class="title" id="title" name="title" maxlength="50" minlength="1" placeholder="Game of throns">
@@ -45,14 +56,9 @@
             </label>
 
             <button type="button" class="add btn">Add new book</button>
-        </form>
+    </form>
+  </div>
 
-        <div class="library"></div>
-
-    </div>
-    <div class="masagge">Your Library is empty. Add your first book!</div>
-</main>
-
-<script type="module" src="main.js"></script>
+<script type="module" src="/js/main.js"></script>
 </body>
 </html>
